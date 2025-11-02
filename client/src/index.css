@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rbc-calendar {
+  @apply font-sans border-none;
+}
+.rbc-toolbar {
+  @apply bg-white border-b border-gray-200 p-3 mb-4;
+}
+.rbc-toolbar button {
+  @apply bg-transparent border border-gray-300 text-gray-700 px-3 py-1 rounded-md cursor-pointer transition-colors;
+}
+.rbc-toolbar button:hover {
+  @apply bg-gray-100;
+}
+.rbc-toolbar button.rbc-active {
+  @apply bg-blue-100 text-blue-700 border-blue-200;
+}
+.rbc-event {
+  @apply bg-blue-500 border-none rounded-md p-1 text-sm text-white;
+}
+.rbc-day-bg.rbc-today {
+  @apply bg-blue-50;
+}
+.rbc-month-view {
+  @apply border border-gray-200 rounded-lg overflow-hidden;
+}
+.rbc-header {
+  @apply border-b border-gray-200 p-2 text-sm font-medium text-gray-600;
+}
+.rbc-day-bg {
+  @apply border-l border-gray-100;
+}
+.rbc-time-view .rbc-time-slot,
+.rbc-month-row {
+  @apply border-t border-gray-200;
+}
+
+/* --- Dark Mode Overrides --- */
+
+.dark .rbc-toolbar {
+  @apply bg-zinc-900 border-b border-zinc-700 p-2;
+}
+.dark .rbc-toolbar button {
+  @apply bg-zinc-700 border-zinc-700 text-gray-200;
+}
+.dark .rbc-toolbar button:hover {
+  @apply bg-zinc-600;
+}
+.dark .rbc-toolbar button.rbc-active {
+  @apply bg-blue-600 text-white;
+}
+
+.dark .rbc-header {
+  @apply p-2 text-sm font-medium text-gray-300;
+  @apply border-b-0; 
+  @apply flex justify-center items-center;
+}
+.dark .rbc-header.rbc-today {
+  @apply text-blue-500 font-bold;
+}
+
+/* --- Month View --- */
+.dark .rbc-day-bg {
+  @apply border-l border-zinc-700;
+}
+.dark .rbc-day-bg.rbc-today {
+  @apply bg-transparent; 
+}
+.dark .rbc-month-view {
+  @apply border border-zinc-700;
+}
+.dark .rbc-month-row {
+  @apply border-t border-zinc-700;
+}
+.dark .rbc-month-view .rbc-day-bg.rbc-off-range {
+  @apply bg-zinc-700;
+}
+.dark .rbc-month-view .rbc-off-range {
+  @apply text-zinc-500;
+}
+
+/* --- Week/Day View --- */
+.dark .rbc-time-view,
+.dark .rbc-time-header,
+.dark .rbc-time-header-content {
+  @apply bg-zinc-950 border-zinc-700 text-gray-200;
+  @apply border-b;
+}
+.dark .rbc-time-content {
+  @apply border-none;
+}
+.dark .rbc-time-view .rbc-day-slot {
+  @apply bg-zinc-950 border-l border-zinc-700;
+}
+.dark .rbc-time-slot {
+  @apply bg-transparent border-t border-zinc-700;
+}
+.dark .rbc-time-view .rbc-day-slot.rbc-today {
+  @apply bg-zinc-900;
+}
+.dark .rbc-time-header-content .rbc-header {
+  @apply border-l-0;
+}
+.dark .rbc-time-gutter,
+.dark .rbc-time-header-gutter {
+  @apply border-r border-zinc-700 bg-zinc-950 text-gray-300;
+  @apply border-b border-zinc-700;
+}
+.dark .rbc-allday-cell {
+  @apply border-b border-zinc-700 bg-zinc-950;
+}
+
+/* --- Agenda View --- */
+.dark .rbc-agenda-view {
+  @apply bg-zinc-900 text-gray-200;
+}
+.dark .rbc-agenda-view table.rbc-agenda-table {
+  @apply border-none w-full;
+}
+.dark .rbc-agenda-view table.rbc-agenda-table thead th {
+  @apply bg-zinc-800 border-b border-zinc-700 p-3 text-left font-semibold text-gray-200;
+}
+.dark .rbc-agenda-view table.rbc-agenda-table thead th:first-child {
+  @apply w-[20%];
+}
+.dark .rbc-agenda-view table.rbc-agenda-table thead th:nth-child(2) {
+  @apply w-[15%];
+}
+.dark .rbc-agenda-view table.rbc-agenda-table thead th:nth-child(3) {
+  @apply w-[65%];
+}
+.dark .rbc-agenda-view table.rbc-agenda-table tbody tr {
+  @apply border-b border-zinc-800;
+}
+.dark .rbc-agenda-view .rbc-agenda-date-cell,
+.dark .rbc-agenda-view .rbc-agenda-time-cell {
+  @apply text-gray-300 p-2;
+}
+.dark .rbc-agenda-content {
+  @apply border-t border-zinc-700;
+}
